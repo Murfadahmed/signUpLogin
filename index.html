@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>signUp page</title>
+</head>
+
+<body>
+   <section class="signUp">
+    <div class="head">
+        <h1>singUp</h1>
+    </div>
+    <div class="info">
+        <label> 
+            <p>First Name</p>
+            <input type="text" class="Fname">
+        </label>
+        <label> 
+            <p>Last Name</p>
+            <input type="text" class="Lname">
+        </label>
+        <label> 
+            <p>Email</p>
+            <input type="email" class="email">
+        </label>
+        <label> 
+            <p>Password</p>
+            <input type="password" class="password" >
+        </label>
+        <br>
+        <label> 
+            <p>select your sex</p>
+           <input type="radio" name="gender" class="gender">Male
+           <input type="radio" name="gender" class="gender">Female
+           <input type="radio" name="gender" class="gender">other
+        </label>
+    </div>
+    <div class="btn">
+        <button class="signUp" onclick="signUp()">signUp</button>
+        <button class="clear" onclick="clear()">clear History</button>
+    </div>
+   </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
