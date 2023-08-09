@@ -17,6 +17,8 @@ let loginEmail = document.querySelector('.loginEmail')
 let loginPassword = document.querySelector('.loginPassword')
 
 let loginBtn = document.querySelector('.loginBtn')
+
+var get;
 // console.log(loginPassword);
 // console.log(loginBtn);
 
@@ -43,10 +45,10 @@ function signUp() {
 
         
         localStorage.setItem('userData', JSON.stringify(userData));
-        
-        var get = JSON.parse(localStorage.getItem('userData'))
-        console.log(get);
-
+        // console.log(ge);
+         get = JSON.parse(localStorage.getItem('userData'))
+         
+         console.log(get);
        
         
         firstName.value = ''
@@ -62,13 +64,18 @@ function signUp() {
         alert("field to fill up krley bhai;")
     }
 }
-
 function login(para){
 
     console.log(para);
-    
-    if(loginEmail.value == JSON.parse(localStorage.getItem('userData')).signUpEmail && loginPassword.value == JSON.parse(localStorage.getItem('userData')).signUpPassword ){
-        console.log(loginEmail.value,loginPassword.value);
+    let poka = JSON.parse(localStorage.getItem("userData"))
+    console.log(  typeof poka);
+    // console.log(  typeof poka);
+    console.log(poka.signUpEmail);
+    console.log(poka.signUpPassword);
+    // if(loginEmail.value == JSON.parse(localStorage.getItem('userData')).signUpEmail && loginPassword.value == JSON.parse(localStorage.getItem('userData')).signUpPassword ){
+    //     console.log(loginEmail.value,loginPassword.value);
+    if(loginEmail.value == poka.signUpEmail && loginPassword.value == poka.signUpPassword ){
+        // console.log(loginEmail.value,loginPassword.value);
 
         window.open()
     }
