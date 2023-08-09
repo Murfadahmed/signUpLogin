@@ -18,7 +18,9 @@ let loginPassword = document.querySelector('.loginPassword')
 
 let loginBtn = document.querySelector('.loginBtn')
 
-var get;
+let get = 1;
+
+
 // console.log(loginPassword);
 // console.log(loginBtn);
 
@@ -26,12 +28,6 @@ var get;
 
 // let user = JSON.parse(localStorage.getItem('userData')) || []
 // console.log(user);
-
-
-
-
-
-
 
 
 function signUp() {
@@ -45,7 +41,7 @@ function signUp() {
 
         
         localStorage.setItem('userData', JSON.stringify(userData));
-        // console.log(ge);
+        // console.log(get);
          get = JSON.parse(localStorage.getItem('userData'))
          
          console.log(get);
@@ -64,17 +60,18 @@ function signUp() {
         alert("field to fill up krley bhai;")
     }
 }
+
 function login(para){
 
+    console.log(get);
     console.log(para);
-    let poka = JSON.parse(localStorage.getItem("userData"))
-    console.log(  typeof poka);
-    // console.log(  typeof poka);
-    console.log(poka.signUpEmail);
-    console.log(poka.signUpPassword);
+    let userSignupData = JSON.parse(localStorage.getItem("userData"))
+    
+    console.log(userSignupData.signUpEmail);
+    console.log(userSignupData.signUpPassword);
     // if(loginEmail.value == JSON.parse(localStorage.getItem('userData')).signUpEmail && loginPassword.value == JSON.parse(localStorage.getItem('userData')).signUpPassword ){
     //     console.log(loginEmail.value,loginPassword.value);
-    if(loginEmail.value == poka.signUpEmail && loginPassword.value == poka.signUpPassword ){
+    if(loginEmail.value == userSignupData.signUpEmail && loginPassword.value == userSignupData.signUpPassword ){
         // console.log(loginEmail.value,loginPassword.value);
 
         window.open()
